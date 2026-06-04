@@ -6,71 +6,87 @@
     <title>Happy Birthday Nuzu ✨</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
-        body { background: #0f0c20; color: #fff; overflow-x: hidden; text-align: center; min-height: 100vh; position: relative; }
+        body { background: #0c0014; color: #fff; overflow-x: hidden; text-align: center; min-height: 100vh; position: relative; }
         
-        /* Strict Screen Control */
-        .screen { display: none; min-height: 100vh; width: 100%; flex-direction: column; justify-content: center; align-items: center; padding: 20px; position: absolute; top: 0; left: 0; }
+        /* Strict Screen Control with Soft Fade In */
+        .screen { display: none; min-height: 100vh; width: 100%; flex-direction: column; justify-content: center; align-items: center; padding: 30px 20px; position: absolute; top: 0; left: 0; }
         .active { display: flex !important; position: relative; }
         
-        /* Slide Animation */
-        .slide-in { animation: slideInRight 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
-        @keyframes slideInRight {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+        /* Beautiful Romantic Transitions */
+        .slide-in { animation: fadeInRomantic 0.8s ease-in-out forwards; }
+        @keyframes fadeInRomantic {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
-        /* Premium Buttons - Mobile Optimized */
-        .btn { background: linear-gradient(45deg, #ff4b91, #ff7676); color: white; border: none; padding: 12px 30px; font-size: 16px; font-weight: bold; border-radius: 25px; cursor: pointer; box-shadow: 0 5px 15px rgba(255, 75, 145, 0.4); transition: 0.3s; margin-top: 25px; text-decoration: none; width: auto; max-width: 90%; }
-        .btn:hover { transform: scale(1.05); }
+        /* Hearts Background Effect */
+        .romantic-bg { background: radial-gradient(circle, #2b001d, #0c0014); position: relative; }
+        .romantic-bg::before { content: '❤️'; position: absolute; font-size: 14px; opacity: 0.15; animation: floatHearts 6s infinite linear; left: 10%; top: 20%; }
+        .romantic-bg::after { content: '💖'; position: absolute; font-size: 16px; opacity: 0.15; animation: floatHearts 8s infinite linear; right: 15%; bottom: 20%; }
+        @keyframes floatHearts {
+            0% { transform: translateY(0) scale(1); opacity: 0.15; }
+            50% { transform: translateY(-30px) scale(1.2); opacity: 0.3; }
+            100% { transform: translateY(-60px) scale(1); opacity: 0; }
+        }
 
-        /* Screens Styling */
-        #pass-screen { background: radial-gradient(circle, #1a103c, #05021a); z-index: 10; }
-        .lock-icon { font-size: 50px; margin-bottom: 20px; }
-        input[type="password"] { background: rgba(255,255,255,0.1); border: 2px solid #ff4b91; padding: 12px 20px; width: 250px; border-radius: 25px; color: white; font-size: 18px; text-align: center; outline: none; margin-bottom: 10px; }
+        /* Ultra Premium Romantic Buttons */
+        .btn { background: linear-gradient(45deg, #ff2a74, #ff5e62); color: white; border: none; padding: 14px 35px; font-size: 16px; font-weight: 600; border-radius: 30px; cursor: pointer; box-shadow: 0 6px 20px rgba(255, 42, 116, 0.4); transition: all 0.4s ease; margin-top: 30px; text-decoration: none; letter-spacing: 1px; width: auto; max-width: 90%; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(255, 42, 116, 0.6); background: linear-gradient(45deg, #ff5e62, #ff2a74); }
+
+        /* Screens Custom Styling */
+        #pass-screen { background: radial-gradient(circle, #1f0016, #05000a); z-index: 10; }
+        .lock-icon { font-size: 55px; margin-bottom: 20px; animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        input[type="password"] { background: rgba(255, 42, 116, 0.08); border: 2px solid #ff2a74; padding: 14px 20px; width: 260px; border-radius: 30px; color: white; font-size: 18px; text-align: center; outline: none; margin-bottom: 15px; box-shadow: inset 0 0 10px rgba(255,42,116,0.2); transition: 0.3s; }
+        input[type="password"]:focus { box-shadow: 0 0 15px rgba(255, 42, 116, 0.5); border-color: #ff5e62; }
         
-        #wish-screen { background: linear-gradient(to bottom, #110d29, #240b36); }
-        .big-wish { font-size: 36px; font-weight: 900; color: #fff; text-shadow: 0 0 10px #ff4b91, 0 0 20px #ff4b91; line-height: 1.3; }
-        .sub-wish { font-size: 24px; color: #ff7676; font-weight: bold; margin-top: 10px; }
+        #wish-screen { background: linear-gradient(to bottom, #1a001a, #330026); }
+        .big-wish { font-size: 40px; font-weight: 900; color: #fff; text-shadow: 0 0 15px #ff2a74, 0 0 30px #ff2a74; letter-spacing: 2px; line-height: 1.3; }
+        .sub-wish { font-size: 26px; color: #ffe17d; font-weight: bold; margin-top: 12px; text-shadow: 0 0 10px rgba(255,225,125,0.4); letter-spacing: 4px; }
 
-        #fairy-screen { background: linear-gradient(135deg, #1d0a34, #05021a); }
-        #text-screen { background: #0b0822; }
-        .big-bold-text { font-size: 30px; font-weight: 800; color: #fff; text-shadow: 0 0 15px #ff7676; padding: 0 15px; line-height: 1.5; }
+        #fairy-screen { background: linear-gradient(135deg, #24001c, #0c0014); }
+        #text-screen { background: #08000f; }
+        .big-bold-text { font-size: 32px; font-weight: 800; color: #fff; text-shadow: 0 0 20px #ff5e62; padding: 0 15px; line-height: 1.6; }
 
-        /* Posters - 100% Mobile Responsive */
-        .poster-screen { background: #070514; }
-        .poster-wrapper { width: 100%; max-width: 340px; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 35px rgba(0,0,0,0.9); border: 4px solid rgba(255, 75, 145, 0.4); margin: 20px 0; background: #141124; }
-        .poster-wrapper img { width: 100%; height: auto; max-height: 450px; display: block; object-fit: contain; margin: 0 auto; }
+        /* Posters - Premium Romantic Borders */
+        .poster-screen { background: #05000a; }
+        .poster-wrapper { width: 100%; max-width: 340px; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.8); border: 3px solid transparent; background-image: linear-gradient(#05000a, #05000a), linear-gradient(45deg, #ff2a74, #ffe17d); background-origin: border-box; background-clip: content-box, border-box; margin: 25px 0; padding: 4px; }
+        .poster-wrapper img { width: 100%; height: auto; max-height: 460px; display: block; object-fit: contain; border-radius: 20px; }
 
-        /* Balloon Screen Style - Mobile Friendly */
-        #balloon-screen { background: linear-gradient(to bottom, #0f0c20, #180933); }
-        .balloon-container { display: flex; gap: 20px; margin: 40px 0; justify-content: center; width: 100%; }
-        .balloon { font-size: 55px; cursor: pointer; transition: transform 0.1s; user-select: none; animation: float 2s ease-in-out infinite alternate; }
-        .balloon:nth-child(2) { animation-delay: 0.5s; }
-        .balloon:nth-child(3) { animation-delay: 1s; }
+        /* Balloon Screen Style */
+        #balloon-screen { background: linear-gradient(to bottom, #12001a, #260026); }
+        .balloon-container { display: flex; gap: 22px; margin: 45px 0; justify-content: center; width: 100%; }
+        .balloon { font-size: 58px; cursor: pointer; transition: transform 0.1s; user-select: none; animation: float 2.5s ease-in-out infinite alternate; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3)); }
+        .balloon:nth-child(2) { animation-delay: 0.6s; }
+        .balloon:nth-child(3) { animation-delay: 1.2s; }
         @keyframes float {
             from { transform: translateY(0); }
-            to { transform: translateY(-15px); }
+            to { transform: translateY(-20px); }
         }
         .popped { transform: scale(0); opacity: 0; pointer-events: none; transition: 0.2s ease-out; }
 
         /* Cake Screen */
-        #cake-screen { background: linear-gradient(to top, #0f0c20, #1f104f); }
-        .cake-container { position: relative; margin: 25px 0; }
-        .cake-emoji { font-size: 90px; display: block; transition: 0.3s; }
-        .candle { font-size: 30px; position: absolute; top: -25px; left: 50%; transform: translateX(-50%); cursor: pointer; transition: 0.3s; }
+        #cake-screen { background: linear-gradient(to top, #0c0014, #2d002d); }
+        .cake-container { position: relative; margin: 30px 0; }
+        .cake-emoji { font-size: 95px; display: block; transition: 0.3s; filter: drop-shadow(0 10px 20px rgba(255,42,116,0.3)); }
+        .candle { font-size: 32px; position: absolute; top: -25px; left: 50%; transform: translateX(-50%); cursor: pointer; transition: 0.3s; }
         .candle.blown { opacity: 0; transform: translateX(-50%) scale(0); }
 
         /* Mini Game */
-        #mini-game-screen { background: linear-gradient(to bottom, #110d29, #1a103c); }
-        .box-container { display: flex; gap: 20px; margin-top: 30px; justify-content: center; width: 100%; }
-        .gift-box-emoji { font-size: 55px; cursor: pointer; transition: 0.3s; }
-        .gift-box-emoji:hover { transform: scale(1.2); }
+        #mini-game-screen { background: linear-gradient(to bottom, #1a001a, #140024); }
+        .box-container { display: flex; gap: 25px; margin-top: 35px; justify-content: center; width: 100%; }
+        .gift-box-emoji { font-size: 60px; cursor: pointer; transition: 0.3s; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); }
+        .gift-box-emoji:hover { transform: scale(1.18); }
 
-        /* Final Screen - Beautiful Scrolling on Mobile */
-        #main-screen { background: linear-gradient(to bottom, #0f0c20, #190a35, #2c0936); display: none; flex-direction: column; align-items: center; padding: 30px 15px; width: 100%; overflow-y: auto; min-height: 100vh; }
-        .letter-box { background: rgba(255, 255, 255, 0.06); border: 2px solid rgba(255, 75, 145, 0.4); border-radius: 20px; padding: 30px 20px; max-width: 650px; width: 100%; backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 35px; }
-        .letter-text { font-size: 15px; line-height: 1.8; color: #f0e6ff; text-align: left; white-space: pre-line; }
-        .voucher-box { background: linear-gradient(135deg, #ffe17d, #ffae19); color: #000; padding: 20px; border-radius: 15px; max-width: 550px; width: 100%; margin-bottom: 30px; font-weight: bold; font-size: 18px; display: none; border: 3px dashed #000; box-shadow: 0 8px 25px rgba(255, 174, 25, 0.5); }
+        /* Final Screen - Long, Elegant & Scrolling Page */
+        #main-screen { background: linear-gradient(to bottom, #0c0014, #260021, #3b002c, #14001f); display: none; flex-direction: column; align-items: center; padding: 45px 18px; width: 100%; overflow-y: auto; min-height: 100vh; }
+        .letter-box { background: rgba(255, 255, 255, 0.04); border: 2px solid rgba(255, 42, 116, 0.3); border-radius: 24px; padding: 35px 24px; max-width: 650px; width: 100%; backdrop-filter: blur(15px); box-shadow: 0 15px 35px rgba(0,0,0,0.6); margin-bottom: 40px; }
+        .letter-text { font-size: 15.5px; line-height: 1.9; color: #f5ebff; text-align: left; white-space: pre-line; letter-spacing: 0.3px; }
+        .voucher-box { background: linear-gradient(135deg, #ffe17d, #ffae19); color: #11001a; padding: 22px; border-radius: 18px; max-width: 550px; width: 100%; margin-bottom: 35px; font-weight: bold; font-size: 18px; display: none; border: 3px dashed #11001a; box-shadow: 0 10px 30px rgba(255, 174, 25, 0.4); text-transform: uppercase; letter-spacing: 1px; }
     </style>
 </head>
 <body>
@@ -78,62 +94,70 @@
     <audio id="bg-song" src="tose_naina.mp3" loop></audio>
     <audio id="yes-song" src="pariyon_kahani.mp3" loop></audio>
 
+    <!-- 1. PASSWORD SCREEN -->
     <div id="pass-screen" class="screen active">
         <div class="pass-box">
             <div class="lock-icon">🔒</div>
-            <h2>Authentication Required</h2>
-            <p style="margin-bottom: 15px; color: #aaa; font-size: 14px;">Enter the secret code to unlock your surprise</p>
+            <h2 style="font-weight: 600; letter-spacing: 0.5px;">Authentication Required</h2>
+            <p style="margin-bottom: 20px; color: #b5a6bd; font-size: 14px;">Enter the secret code to unlock your surprise</p>
             <input type="password" id="password-input" placeholder="Enter Password..."><br>
             <button class="btn" onclick="checkPassword()">Unlock ✨</button>
         </div>
     </div>
 
-    <div id="wish-screen" class="screen">
+    <!-- 2. BIG BIRTHDAY WISH SCREEN -->
+    <div id="wish-screen" class="screen romantic-bg">
         <h1 class="big-wish">HAPPY BIRTHDAY</h1>
         <h2 class="sub-wish">NUZU 👑</h2>
-        <div style="font-size: 35px; margin: 20px 0;">🎉 🎂 🎈 ✨</div>
+        <div style="font-size: 38px; margin: 25px 0; filter: drop-shadow(0 5px 10px rgba(255,42,116,0.3));">🌹 ✨ 🎂 ✨ ❤️</div>
         <button class="btn" onclick="nextScreen('wish-screen', 'fairy-screen')">Next Surprise ➔</button>
     </div>
 
-    <div id="fairy-screen" class="screen">
+    <!-- 3. PARIYON WALA QUESTION SCREEN -->
+    <div id="fairy-screen" class="screen romantic-bg">
         <div class="question-box">
-            <h2 style="font-size: 22px; line-height: 1.5; margin-bottom: 10px; padding: 0 10px;">Kya aapne kabhi pariya dekhi hain? 🧚✨</h2>
+            <h2 style="font-size: 23px; line-height: 1.6; margin-bottom: 15px; padding: 0 10px; font-weight: 500;">Kya aapne kabhi pariya dekhi hain? 🧚✨</h2>
             <button class="btn" onclick="playYesGame()">Nahi ❌</button>
         </div>
     </div>
 
+    <!-- 4. BADE WRITE SE TEXT SCREEN -->
     <div id="text-screen" class="screen">
         <h1 class="big-bold-text">Lo toh dekh lo! 😍✨</h1>
         <button class="btn" onclick="nextScreen('text-screen', 'poster1-screen')">Dekhao ➔</button>
     </div>
 
+    <!-- 5. BADE POSTER SCREEN 1 -->
     <div id="poster1-screen" class="screen poster-screen">
-        <h2 style="color: #ff4b91; font-size: 18px;">A Special Memory For You ✨</h2>
+        <h2 style="color: #ff4b91; font-size: 19px; letter-spacing: 0.5px;">A Special Memory For You ✨</h2>
         <div class="poster-wrapper">
             <img src="photo1.jpg" alt="Memory 1">
         </div>
         <button class="btn" onclick="nextScreen('poster1-screen', 'poster2-screen')">Next Memory ➔</button>
     </div>
 
+    <!-- 6. BADE POSTER SCREEN 2 -->
     <div id="poster2-screen" class="screen poster-screen">
-        <h2 style="color: #ff4b91; font-size: 18px;">Another Beautiful Moment 👑</h2>
+        <h2 style="color: #ff4b91; font-size: 19px; letter-spacing: 0.5px;">Another Beautiful Moment 👑</h2>
         <div class="poster-wrapper">
             <img src="photo2.jpg" alt="Memory 2">
         </div>
         <button class="btn" onclick="nextScreen('poster2-screen', 'poster4-screen')">Next Memory ➔</button>
     </div>
 
+    <!-- 7. BADE POSTER SCREEN 3 -->
     <div id="poster4-screen" class="screen poster-screen">
-        <h2 style="color: #ff4b91; font-size: 18px;">Just One More View ❤️</h2>
+        <h2 style="color: #ff4b91; font-size: 19px; letter-spacing: 0.5px;">Just One More View ❤️</h2>
         <div class="poster-wrapper">
             <img src="photo4.jpg" alt="Memory 3">
         </div>
         <button class="btn" onclick="nextScreen('poster4-screen', 'balloon-screen')">Continue ➔</button>
     </div>
 
-    <div id="balloon-screen" class="screen">
-        <h2 style="color: #ff4b91; font-size: 22px; padding: 0 10px;">Pop the Balloons to Unlock the Cake! 🎈</h2>
-        <p style="color: #aaa; margin-top: 5px; font-size: 14px;">Tap each balloon to pop it!</p>
+    <!-- 8. BALLOON POPPING SCREEN -->
+    <div id="balloon-screen" class="screen romantic-bg">
+        <h2 style="color: #ff2a74; font-size: 22px; padding: 0 10px; font-weight: 600;">Pop the Balloons to Unlock the Cake! 🎈</h2>
+        <p style="color: #b5a6bd; margin-top: 6px; font-size: 14px;">Tap each balloon to pop it!</p>
         <div class="balloon-container">
             <div class="balloon" onclick="popBalloon(this)">🎈</div>
             <div class="balloon" onclick="popBalloon(this)">🎈</div>
@@ -142,8 +166,9 @@
         <button id="balloon-next" class="btn" style="display: none;" onclick="nextScreen('balloon-screen', 'cake-screen')">Proceed to Cake ➔</button>
     </div>
 
+    <!-- 9. CAKE CUTTING SCREEN -->
     <div id="cake-screen" class="screen">
-        <h2 style="color: #ff4b91; font-size: 22px; margin-bottom: 20px;">Make a Wish & Blow the Candle!</h2>
+        <h2 style="color: #ff2a74; font-size: 22px; margin-bottom: 25px; font-weight: 600;">Make a Wish & Blow the Candle!</h2>
         <div class="cake-container">
             <div id="candle-flame" class="candle" onclick="blowCandle()">🔥</div>
             <div id="main-cake" class="cake-emoji">🎂</div>
@@ -152,9 +177,10 @@
         <button id="cake-next" class="btn" style="display: none;" onclick="nextScreen('cake-screen', 'mini-game-screen')">Cut the Cake ➔</button>
     </div>
 
-    <div id="mini-game-screen" class="screen">
-        <h2 style="color: #ff4b91; font-size: 22px;">Choose a Lucky Gift Box! 🎁</h2>
-        <p style="color: #aaa; margin-top: 5px; font-size: 14px; padding: 0 10px;">Click on any box to see which one has your main gift!</p>
+    <!-- 10. SURPRISE GAME SCREEN -->
+    <div id="mini-game-screen" class="screen romantic-bg">
+        <h2 style="color: #ff2a74; font-size: 22px; font-weight: 600;">Choose a Lucky Gift Box! 🎁</h2>
+        <p style="color: #b5a6bd; margin-top: 6px; font-size: 14px; padding: 0 10px;">Click on any box to see which one has your main gift!</p>
         <div class="box-container">
             <div class="gift-box-emoji" onclick="playMiniGame(1)">🎁</div>
             <div class="gift-box-emoji" onclick="playMiniGame(2)">🎁</div>
@@ -163,15 +189,16 @@
         <button id="game-next-btn" class="btn" style="display: none;" onclick="openFinalLetter()">Read My Message ➔</button>
     </div>
 
+    <!-- 11. FINAL SCREEN (LONGER & LUXURIOUS) -->
     <div id="main-screen">
         <div id="opened-voucher" class="voucher-box">
             🎟️ BIRTHDAY VOUCHER UNLOCKED!<br><br>
-            <span style="font-size: 15px; color: #333;">Treat Code: [FREE ICE CREAM PARTY + 100% HAPPINESS]</span><br>
-            <span style="font-size: 13px; font-style: italic; color: #555;">*Valid forever, claim anytime from Arbaz! 😉</span>
+            <span style="font-size: 15px; color: #222; font-weight: 800;">Treat Code: [FREE ICE CREAM PARTY + 100% HAPPINESS]</span><br>
+            <span style="font-size: 13px; font-style: italic; color: #444; font-weight: 500; margin-top: 5px; display: inline-block;">*Valid forever, claim anytime from Arbaz! 😉</span>
         </div>
 
         <div class="letter-box">
-            <h3 style="color: #ff4b91; margin-bottom: 20px; font-size: 22px; text-align: center;">🎂 Happy Birthday Naaz 🎂✨</h3>
+            <h3 style="color: #ff2a74; margin-bottom: 25px; font-size: 24px; text-align: center; font-weight: 700; letter-spacing: 1px;">🎂 Happy Birthday Naaz 🎂✨</h3>
             <p class="letter-text">Happy Birthday, Nuzu, Ghost, Doraemon, Daya, Chulbul Pandey, Madam Ji ye sab ho ap ha 👑🤍
 
 Aaj ka din bahut special hai, kyunki aaj ek bahut pyare aur achhe insaan ka birthday hai. 🎂✨
@@ -199,7 +226,7 @@ Happy Birthday once again! 🎂✨🌸
 Have a wonderful year ahead, princess 👑🤍</p>
         </div>
 
-        <p style="color: #aaa; font-size: 14px; margin-top: 10px;">Made with ❤️ for Nuzu</p>
+        <p style="color: #8a7596; font-size: 13px; margin-top: 15px; letter-spacing: 1px;">Made with ❤️ for Nuzu</p>
     </div>
 
     <script>
@@ -249,7 +276,7 @@ Have a wonderful year ahead, princess 👑🤍</p>
             
             cake.innerHTML = "🍰✨"; 
             document.getElementById('cake-status').innerHTML = "🎉 Cake Cut Ho Gaya! Let's play a quick game now! 🎉";
-            document.getElementById('cake-status').style.color = "#28a745";
+            document.getElementById('cake-status').style.color = "#2aa84a";
             document.getElementById('cake-next').style.display = "inline-block";
         }
 
