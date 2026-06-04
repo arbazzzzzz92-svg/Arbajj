@@ -19,8 +19,8 @@
             to { transform: translateX(0); opacity: 1; }
         }
         
-        /* Premium Buttons */
-        .btn { background: linear-gradient(45deg, #ff4b91, #ff7676); color: white; border: none; padding: 14px 35px; font-size: 18px; font-weight: bold; border-radius: 25px; cursor: pointer; box-shadow: 0 5px 15px rgba(255, 75, 145, 0.4); transition: 0.3s; margin-top: 25px; text-decoration: none; }
+        /* Premium Buttons - Mobile Optimized */
+        .btn { background: linear-gradient(45deg, #ff4b91, #ff7676); color: white; border: none; padding: 12px 30px; font-size: 16px; font-weight: bold; border-radius: 25px; cursor: pointer; box-shadow: 0 5px 15px rgba(255, 75, 145, 0.4); transition: 0.3s; margin-top: 25px; text-decoration: none; width: auto; max-width: 90%; }
         .btn:hover { transform: scale(1.05); }
 
         /* Screens Styling */
@@ -29,22 +29,22 @@
         input[type="password"] { background: rgba(255,255,255,0.1); border: 2px solid #ff4b91; padding: 12px 20px; width: 250px; border-radius: 25px; color: white; font-size: 18px; text-align: center; outline: none; margin-bottom: 10px; }
         
         #wish-screen { background: linear-gradient(to bottom, #110d29, #240b36); }
-        .big-wish { font-size: 42px; font-weight: 900; color: #fff; text-shadow: 0 0 10px #ff4b91, 0 0 20px #ff4b91; line-height: 1.3; }
-        .sub-wish { font-size: 28px; color: #ff7676; font-weight: bold; margin-top: 10px; }
+        .big-wish { font-size: 36px; font-weight: 900; color: #fff; text-shadow: 0 0 10px #ff4b91, 0 0 20px #ff4b91; line-height: 1.3; }
+        .sub-wish { font-size: 24px; color: #ff7676; font-weight: bold; margin-top: 10px; }
 
         #fairy-screen { background: linear-gradient(135deg, #1d0a34, #05021a); }
         #text-screen { background: #0b0822; }
-        .big-bold-text { font-size: 38px; font-weight: 800; color: #fff; text-shadow: 0 0 15px #ff7676; padding: 0 15px; line-height: 1.5; }
+        .big-bold-text { font-size: 30px; font-weight: 800; color: #fff; text-shadow: 0 0 15px #ff7676; padding: 0 15px; line-height: 1.5; }
 
-        /* Posters */
+        /* Posters - 100% Mobile Responsive */
         .poster-screen { background: #070514; }
-        .poster-wrapper { width: 100%; max-width: 420px; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 35px rgba(0,0,0,0.9); border: 4px solid rgba(255, 75, 145, 0.4); margin: 20px 0; }
-        .poster-wrapper img { width: 100%; height: auto; display: block; object-fit: cover; }
+        .poster-wrapper { width: 100%; max-width: 340px; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 35px rgba(0,0,0,0.9); border: 4px solid rgba(255, 75, 145, 0.4); margin: 20px 0; background: #141124; }
+        .poster-wrapper img { width: 100%; height: auto; max-height: 450px; display: block; object-fit: contain; margin: 0 auto; }
 
-        /* Balloon Screen Style */
+        /* Balloon Screen Style - Mobile Friendly */
         #balloon-screen { background: linear-gradient(to bottom, #0f0c20, #180933); }
-        .balloon-container { display: flex; gap: 25px; margin: 40px 0; justify-content: center; }
-        .balloon { font-size: 65px; cursor: pointer; transition: transform 0.1s; user-select: none; animation: float 2s ease-in-out infinite alternate; }
+        .balloon-container { display: flex; gap: 20px; margin: 40px 0; justify-content: center; width: 100%; }
+        .balloon { font-size: 55px; cursor: pointer; transition: transform 0.1s; user-select: none; animation: float 2s ease-in-out infinite alternate; }
         .balloon:nth-child(2) { animation-delay: 0.5s; }
         .balloon:nth-child(3) { animation-delay: 1s; }
         @keyframes float {
@@ -56,21 +56,21 @@
         /* Cake Screen */
         #cake-screen { background: linear-gradient(to top, #0f0c20, #1f104f); }
         .cake-container { position: relative; margin: 25px 0; }
-        .cake-emoji { font-size: 100px; display: block; transition: 0.3s; }
-        .candle { font-size: 35px; position: absolute; top: -25px; left: 50%; transform: translateX(-50%); cursor: pointer; transition: 0.3s; }
+        .cake-emoji { font-size: 90px; display: block; transition: 0.3s; }
+        .candle { font-size: 30px; position: absolute; top: -25px; left: 50%; transform: translateX(-50%); cursor: pointer; transition: 0.3s; }
         .candle.blown { opacity: 0; transform: translateX(-50%) scale(0); }
 
         /* Mini Game */
         #mini-game-screen { background: linear-gradient(to bottom, #110d29, #1a103c); }
-        .box-container { display: flex; gap: 20px; margin-top: 30px; }
-        .gift-box-emoji { font-size: 60px; cursor: pointer; transition: 0.3s; }
+        .box-container { display: flex; gap: 20px; margin-top: 30px; justify-content: center; width: 100%; }
+        .gift-box-emoji { font-size: 55px; cursor: pointer; transition: 0.3s; }
         .gift-box-emoji:hover { transform: scale(1.2); }
 
-        /* Final Screen */
-        #main-screen { background: linear-gradient(to bottom, #0f0c20, #190a35, #2c0936); display: none; flex-direction: column; align-items: center; padding: 40px 20px; width: 100%; overflow-y: auto; min-height: 100vh; }
-        .letter-box { background: rgba(255, 255, 255, 0.06); border: 2px solid rgba(255, 75, 145, 0.4); border-radius: 20px; padding: 40px 30px; max-width: 650px; width: 100%; backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 35px; }
-        .letter-text { font-size: 17px; line-height: 1.9; color: #f0e6ff; text-align: left; white-space: pre-line; }
-        .voucher-box { background: linear-gradient(135deg, #ffe17d, #ffae19); color: #000; padding: 25px; border-radius: 15px; max-width: 550px; width: 100%; margin-bottom: 30px; font-weight: bold; font-size: 20px; display: none; border: 3px dashed #000; box-shadow: 0 8px 25px rgba(255, 174, 25, 0.5); }
+        /* Final Screen - Beautiful Scrolling on Mobile */
+        #main-screen { background: linear-gradient(to bottom, #0f0c20, #190a35, #2c0936); display: none; flex-direction: column; align-items: center; padding: 30px 15px; width: 100%; overflow-y: auto; min-height: 100vh; }
+        .letter-box { background: rgba(255, 255, 255, 0.06); border: 2px solid rgba(255, 75, 145, 0.4); border-radius: 20px; padding: 30px 20px; max-width: 650px; width: 100%; backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 35px; }
+        .letter-text { font-size: 15px; line-height: 1.8; color: #f0e6ff; text-align: left; white-space: pre-line; }
+        .voucher-box { background: linear-gradient(135deg, #ffe17d, #ffae19); color: #000; padding: 20px; border-radius: 15px; max-width: 550px; width: 100%; margin-bottom: 30px; font-weight: bold; font-size: 18px; display: none; border: 3px dashed #000; box-shadow: 0 8px 25px rgba(255, 174, 25, 0.5); }
     </style>
 </head>
 <body>
@@ -78,70 +78,62 @@
     <audio id="bg-song" src="tose_naina.mp3" loop></audio>
     <audio id="yes-song" src="pariyon_kahani.mp3" loop></audio>
 
-    <!-- 1. PASSWORD SCREEN -->
     <div id="pass-screen" class="screen active">
         <div class="pass-box">
             <div class="lock-icon">🔒</div>
             <h2>Authentication Required</h2>
-            <p>Enter the secret code to unlock your surprise</p>
+            <p style="margin-bottom: 15px; color: #aaa; font-size: 14px;">Enter the secret code to unlock your surprise</p>
             <input type="password" id="password-input" placeholder="Enter Password..."><br>
             <button class="btn" onclick="checkPassword()">Unlock ✨</button>
         </div>
     </div>
 
-    <!-- 2. BIG BIRTHDAY WISH SCREEN -->
     <div id="wish-screen" class="screen">
         <h1 class="big-wish">HAPPY BIRTHDAY</h1>
         <h2 class="sub-wish">NUZU 👑</h2>
-        <div style="font-size: 40px; margin: 20px 0;">🎉 🎂 🎈 ✨</div>
+        <div style="font-size: 35px; margin: 20px 0;">🎉 🎂 🎈 ✨</div>
         <button class="btn" onclick="nextScreen('wish-screen', 'fairy-screen')">Next Surprise ➔</button>
     </div>
 
-    <!-- 3. PARIYON WALA QUESTION SCREEN -->
     <div id="fairy-screen" class="screen">
         <div class="question-box">
-            <h2 style="font-size: 26px; line-height: 1.5; margin-bottom: 10px; padding: 0 10px;">Kya aapne kabhi pariya dekhi hain? 🧚✨</h2>
+            <h2 style="font-size: 22px; line-height: 1.5; margin-bottom: 10px; padding: 0 10px;">Kya aapne kabhi pariya dekhi hain? 🧚✨</h2>
             <button class="btn" onclick="playYesGame()">Nahi ❌</button>
         </div>
     </div>
 
-    <!-- 4. BADE WRITE SE TEXT SCREEN -->
     <div id="text-screen" class="screen">
         <h1 class="big-bold-text">Lo toh dekh lo! 😍✨</h1>
         <button class="btn" onclick="nextScreen('text-screen', 'poster1-screen')">Dekhao ➔</button>
     </div>
 
-    <!-- 5. BADE POSTER SCREEN 1 -->
     <div id="poster1-screen" class="screen poster-screen">
-        <h2 style="color: #ff4b91; font-size: 22px;">A Special Memory For You ✨</h2>
+        <h2 style="color: #ff4b91; font-size: 18px;">A Special Memory For You ✨</h2>
         <div class="poster-wrapper">
-            <img src="https://arbazzzzzz92-svg.github.io/Arbaj/photo1.jpg">
+            <img src="photo1.jpg" alt="Memory 1">
         </div>
         <button class="btn" onclick="nextScreen('poster1-screen', 'poster2-screen')">Next Memory ➔</button>
     </div>
 
-    <!-- 6. BADE POSTER SCREEN 2 -->
     <div id="poster2-screen" class="screen poster-screen">
-        <h2 style="color: #ff4b91; font-size: 22px;">Another Beautiful Moment 👑</h2>
+        <h2 style="color: #ff4b91; font-size: 18px;">Another Beautiful Moment 👑</h2>
         <div class="poster-wrapper">
-            <img src="https://arbazzzzzz92-svg.github.io/Arbaj/photo2.jpg">
+            <img src="photo2.jpg" alt="Memory 2">
         </div>
         <button class="btn" onclick="nextScreen('poster2-screen', 'poster4-screen')">Next Memory ➔</button>
     </div>
 
-    <!-- 7. BADE POSTER SCREEN 3 -->
     <div id="poster4-screen" class="screen poster-screen">
-        <h2 style="color: #ff4b91; font-size: 22px;">Just One More View ❤️</h2>
+        <h2 style="color: #ff4b91; font-size: 18px;">Just One More View ❤️</h2>
         <div class="poster-wrapper">
-            <img src="https://arbazzzzzz92-svg.github.io/Arbaj/photo4.jpg">
+            <img src="photo4.jpg" alt="Memory 3">
         </div>
         <button class="btn" onclick="nextScreen('poster4-screen', 'balloon-screen')">Continue ➔</button>
     </div>
 
-    <!-- NEW: 8. BALLOON POPPING SCREEN (CAKE SE PEHLE) -->
     <div id="balloon-screen" class="screen">
-        <h2 style="color: #ff4b91; font-size: 24px;">Pop the Balloons to Unlock the Cake! 🎈</h2>
-        <p style="color: #aaa; margin-top: 5px;">Tap each balloon to pop it!</p>
+        <h2 style="color: #ff4b91; font-size: 22px; padding: 0 10px;">Pop the Balloons to Unlock the Cake! 🎈</h2>
+        <p style="color: #aaa; margin-top: 5px; font-size: 14px;">Tap each balloon to pop it!</p>
         <div class="balloon-container">
             <div class="balloon" onclick="popBalloon(this)">🎈</div>
             <div class="balloon" onclick="popBalloon(this)">🎈</div>
@@ -150,21 +142,19 @@
         <button id="balloon-next" class="btn" style="display: none;" onclick="nextScreen('balloon-screen', 'cake-screen')">Proceed to Cake ➔</button>
     </div>
 
-    <!-- 9. CAKE CUTTING SCREEN -->
     <div id="cake-screen" class="screen">
-        <h2 style="color: #ff4b91; font-size: 24px; margin-bottom: 20px;">Make a Wish & Blow the Candle!</h2>
+        <h2 style="color: #ff4b91; font-size: 22px; margin-bottom: 20px;">Make a Wish & Blow the Candle!</h2>
         <div class="cake-container">
             <div id="candle-flame" class="candle" onclick="blowCandle()">🔥</div>
             <div id="main-cake" class="cake-emoji">🎂</div>
         </div>
-        <p id="cake-status" style="color: #ff7676; font-style: italic; font-size: 16px;">Tap the flame to blow it out!</p>
+        <p id="cake-status" style="color: #ff7676; font-style: italic; font-size: 14px;">Tap the flame to blow it out!</p>
         <button id="cake-next" class="btn" style="display: none;" onclick="nextScreen('cake-screen', 'mini-game-screen')">Cut the Cake ➔</button>
     </div>
 
-    <!-- 10. CUTTING KE BAAD CHOTA SURPRISE GAME SCREEN -->
     <div id="mini-game-screen" class="screen">
-        <h2 style="color: #ff4b91; font-size: 24px;">Choose a Lucky Gift Box! 🎁</h2>
-        <p style="color: #aaa; margin-top: 5px;">Click on any box to see which one has your main gift!</p>
+        <h2 style="color: #ff4b91; font-size: 22px;">Choose a Lucky Gift Box! 🎁</h2>
+        <p style="color: #aaa; margin-top: 5px; font-size: 14px; padding: 0 10px;">Click on any box to see which one has your main gift!</p>
         <div class="box-container">
             <div class="gift-box-emoji" onclick="playMiniGame(1)">🎁</div>
             <div class="gift-box-emoji" onclick="playMiniGame(2)">🎁</div>
@@ -173,16 +163,15 @@
         <button id="game-next-btn" class="btn" style="display: none;" onclick="openFinalLetter()">Read My Message ➔</button>
     </div>
 
-    <!-- 11. FINAL SCREEN -->
     <div id="main-screen">
         <div id="opened-voucher" class="voucher-box">
             🎟️ BIRTHDAY VOUCHER UNLOCKED!<br><br>
-            <span style="font-size: 16px; color: #333;">Treat Code: [FREE ICE CREAM PARTY + 100% HAPPINESS]</span><br>
-            <span style="font-size: 14px; font-style: italic; color: #555;">*Valid forever, claim anytime from Arbaz! 😉</span>
+            <span style="font-size: 15px; color: #333;">Treat Code: [FREE ICE CREAM PARTY + 100% HAPPINESS]</span><br>
+            <span style="font-size: 13px; font-style: italic; color: #555;">*Valid forever, claim anytime from Arbaz! 😉</span>
         </div>
 
         <div class="letter-box">
-            <h3 style="color: #ff4b91; margin-bottom: 25px; font-size: 24px; text-align: center;">🎂 Happy Birthday Naaz 🎂✨</h3>
+            <h3 style="color: #ff4b91; margin-bottom: 20px; font-size: 22px; text-align: center;">🎂 Happy Birthday Naaz 🎂✨</h3>
             <p class="letter-text">Happy Birthday, Nuzu, Ghost, Doraemon, Daya, Chulbul Pandey, Madam Ji ye sab ho ap ha 👑🤍
 
 Aaj ka din bahut special hai, kyunki aaj ek bahut pyare aur achhe insaan ka birthday hai. 🎂✨
@@ -210,7 +199,7 @@ Happy Birthday once again! 🎂✨🌸
 Have a wonderful year ahead, princess 👑🤍</p>
         </div>
 
-        <p style="color: #aaa; font-size: 14px; margin-top: 20px;">Made with ❤️ for Nuzu</p>
+        <p style="color: #aaa; font-size: 14px; margin-top: 10px;">Made with ❤️ for Nuzu</p>
     </div>
 
     <script>
@@ -279,5 +268,4 @@ Have a wonderful year ahead, princess 👑🤍</p>
         }
     </script>
 </body>
-  </html>
-  
+</html>
