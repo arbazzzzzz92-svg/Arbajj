@@ -94,7 +94,6 @@
     <audio id="bg-song" src="tose_naina.mp3" loop></audio>
     <audio id="yes-song" src="pariyon_kahani.mp3" loop></audio>
 
-    <!-- 1. PASSWORD SCREEN -->
     <div id="pass-screen" class="screen active">
         <div class="pass-box">
             <div class="lock-icon">🔒</div>
@@ -105,7 +104,6 @@
         </div>
     </div>
 
-    <!-- 2. BIG BIRTHDAY WISH SCREEN -->
     <div id="wish-screen" class="screen romantic-bg">
         <h1 class="big-wish">HAPPY BIRTHDAY</h1>
         <h2 class="sub-wish">NUZU 👑</h2>
@@ -113,7 +111,6 @@
         <button class="btn" onclick="nextScreen('wish-screen', 'fairy-screen')">Next Surprise ➔</button>
     </div>
 
-    <!-- 3. PARIYON WALA QUESTION SCREEN -->
     <div id="fairy-screen" class="screen romantic-bg">
         <div class="question-box">
             <h2 style="font-size: 23px; line-height: 1.6; margin-bottom: 15px; padding: 0 10px; font-weight: 500;">Kya aapne kabhi pariya dekhi hain? 🧚✨</h2>
@@ -121,13 +118,11 @@
         </div>
     </div>
 
-    <!-- 4. BADE WRITE SE TEXT SCREEN -->
     <div id="text-screen" class="screen">
         <h1 class="big-bold-text">Lo toh dekh lo! 😍✨</h1>
         <button class="btn" onclick="nextScreen('text-screen', 'poster1-screen')">Dekhao ➔</button>
     </div>
 
-    <!-- 5. BADE POSTER SCREEN 1 -->
     <div id="poster1-screen" class="screen poster-screen">
         <h2 style="color: #ff4b91; font-size: 19px; letter-spacing: 0.5px;">A Special Memory For You ✨</h2>
         <div class="poster-wrapper">
@@ -136,7 +131,6 @@
         <button class="btn" onclick="nextScreen('poster1-screen', 'poster2-screen')">Next Memory ➔</button>
     </div>
 
-    <!-- 6. BADE POSTER SCREEN 2 -->
     <div id="poster2-screen" class="screen poster-screen">
         <h2 style="color: #ff4b91; font-size: 19px; letter-spacing: 0.5px;">Another Beautiful Moment 👑</h2>
         <div class="poster-wrapper">
@@ -145,7 +139,6 @@
         <button class="btn" onclick="nextScreen('poster2-screen', 'poster4-screen')">Next Memory ➔</button>
     </div>
 
-    <!-- 7. BADE POSTER SCREEN 3 -->
     <div id="poster4-screen" class="screen poster-screen">
         <h2 style="color: #ff4b91; font-size: 19px; letter-spacing: 0.5px;">Just One More View ❤️</h2>
         <div class="poster-wrapper">
@@ -154,7 +147,6 @@
         <button class="btn" onclick="nextScreen('poster4-screen', 'balloon-screen')">Continue ➔</button>
     </div>
 
-    <!-- 8. BALLOON POPPING SCREEN -->
     <div id="balloon-screen" class="screen romantic-bg">
         <h2 style="color: #ff2a74; font-size: 22px; padding: 0 10px; font-weight: 600;">Pop the Balloons to Unlock the Cake! 🎈</h2>
         <p style="color: #b5a6bd; margin-top: 6px; font-size: 14px;">Tap each balloon to pop it!</p>
@@ -166,7 +158,6 @@
         <button id="balloon-next" class="btn" style="display: none;" onclick="nextScreen('balloon-screen', 'cake-screen')">Proceed to Cake ➔</button>
     </div>
 
-    <!-- 9. CAKE CUTTING SCREEN -->
     <div id="cake-screen" class="screen">
         <h2 style="color: #ff2a74; font-size: 22px; margin-bottom: 25px; font-weight: 600;">Make a Wish & Blow the Candle!</h2>
         <div class="cake-container">
@@ -177,7 +168,6 @@
         <button id="cake-next" class="btn" style="display: none;" onclick="nextScreen('cake-screen', 'mini-game-screen')">Cut the Cake ➔</button>
     </div>
 
-    <!-- 10. SURPRISE GAME SCREEN -->
     <div id="mini-game-screen" class="screen romantic-bg">
         <h2 style="color: #ff2a74; font-size: 22px; font-weight: 600;">Choose a Lucky Gift Box! 🎁</h2>
         <p style="color: #b5a6bd; margin-top: 6px; font-size: 14px; padding: 0 10px;">Click on any box to see which one has your main gift!</p>
@@ -189,7 +179,6 @@
         <button id="game-next-btn" class="btn" style="display: none;" onclick="openFinalLetter()">Read My Message ➔</button>
     </div>
 
-    <!-- 11. FINAL SCREEN (LONGER & LUXURIOUS) -->
     <div id="main-screen">
         <div id="opened-voucher" class="voucher-box">
             🎟️ BIRTHDAY VOUCHER UNLOCKED!<br><br>
@@ -295,5 +284,5 @@ Have a wonderful year ahead, princess 👑🤍</p>
         }
     </script>
 </body>
-                                                                       </html>
-
+    </html>
+    
